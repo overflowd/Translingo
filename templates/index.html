@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translingo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <span id="source-lang-label"><span id="source-lang">en</span></span>
+                <select id="source-lang-select" class="language-select">
+                    <option value="en">English</option>
+                    <option value="tr">Turkish</option>
+                    <!-- Diğer diller buraya eklenebilir -->
+                </select>
+                <button id="source-voice-btn" class="voice-btn">🔊</button>
+            </div>
+            <div class="content">
+                <textarea id="source-text" placeholder="Enter text to translate..."></textarea>
+            </div>
+        </div>
+        <button class="translate-btn" id="translate-btn">➡️</button>
+        <div class="card">
+            <div class="header">
+                <span id="target-lang-label"><span id="target-lang">tr</span></span>
+                <select id="target-lang-select" class="language-select">
+                    <option value="tr">Turkish</option>
+                    <option value="en">English</option>
+                    <!-- Diğer diller buraya eklenebilir -->
+                </select>
+                <button id="target-voice-btn" class="voice-btn">🔊</button>
+            </div>
+            <div class="content">
+                <textarea id="translated-text" placeholder="Translation will appear here..." readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+

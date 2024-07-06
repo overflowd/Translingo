@@ -63,6 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < options.length; i++) {
             if (options[i].value === sourceLang) {
                 options[i].style.display = 'none';
+            } else if (options[i].value === 'uk' && !(sourceLang === 'en' || sourceLang === 'tr')) {
+                options[i].style.display = 'none';
+            } else if (options[i].value === 'az' && !(sourceLang === 'en' || sourceLang === 'tr')) {
+                options[i].style.display = 'none';
             } else {
                 options[i].style.display = 'block';
                 if (firstValidOption === null) {

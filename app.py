@@ -12,6 +12,22 @@ def load_model(src_lang, tgt_lang):
         model_name = 'Helsinki-NLP/opus-tatoeba-en-tr'
     elif src_lang == "tr" and tgt_lang == "en":
         model_name = 'Helsinki-NLP/opus-mt-tr-en'
+    elif src_lang == "tr" and tgt_lang == "az":
+        model_name = 'Helsinki-NLP/opus-mt-tr-az'
+    elif src_lang == "az" and tgt_lang == "tr":
+        model_name = 'Helsinki-NLP/opus-mt-az-tr'
+    elif src_lang == "tr" and tgt_lang == "uk":
+        model_name = 'Helsinki-NLP/opus-mt-tr-uk'
+    elif src_lang == "uk" and tgt_lang == "tr":
+        model_name = 'Helsinki-NLP/opus-mt-uk-tr'
+    elif src_lang == "az" and tgt_lang == "en":
+        model_name = 'Helsinki-NLP/opus-mt-az-en'
+    elif src_lang == "en" and tgt_lang == "az":
+        model_name = 'Helsinki-NLP/opus-mt-en-az'
+    elif src_lang == "uk" and tgt_lang == "en":
+        model_name = 'Helsinki-NLP/opus-mt-uk-en'
+    elif src_lang == "en" and tgt_lang == "uk":
+        model_name = 'Helsinki-NLP/opus-mt-en-uk'
     else:
         return None, None
 
